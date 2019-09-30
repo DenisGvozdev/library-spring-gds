@@ -4,16 +4,28 @@ import java.util.Date;
 
 public class Book {
 
-    private final int id;
-    private final String name;
-    private final Date createDate;
-    private final String description;
-    private final byte[] image;
-    private final Integer genre;
-    private final Integer status;
-    private final Integer author;
+    private int id;
+    private String name;
+    private Date createDate;
+    private String description;
+    private byte[] image;
+    private Integer genre;
+    private Integer status;
+    private Integer author;
 
-    public Book(int id, String name, Date createDate,
+    public Book(String name, Date createDate,
+                 String description, byte[] image,
+                 Integer genre, Integer status, Integer author) {
+        this.name = name;
+        this.createDate = createDate;
+        this.description = description;
+        this.image = image;
+        this.genre = genre;
+        this.status = status;
+        this.author = author;
+    }
+
+    public Book(Integer id, String name, Date createDate,
                 String description, byte[] image,
                 Integer genre, Integer status, Integer author) {
         this.id = id;
